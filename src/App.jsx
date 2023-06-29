@@ -49,14 +49,16 @@ function App() {
           handleSearch
           }}>
           <Header/>
-          <Search/>
-        <Routes>
-           <Route path='/' element= {<Home data={country}/>}/>
-           {/* <Route path='/detail/:flag' element={<Detail data={country}/>} /> */}
-        </Routes>
+          <Search/>   
+          <Routes>    
+            <Route path='/'
+             element={<Home data={country}/>} />
+           
+            <Route path='/detail/:flag'
+             element={<Detail data={country}/>} />     
+          </Routes>  
         </Context.Provider>
     </BrowserRouter>
-    
   )
 }
 

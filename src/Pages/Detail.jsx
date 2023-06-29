@@ -15,15 +15,19 @@ function Detail() {
 
   return (
     <div className={darkMode ? 'App darkMode' : 'App'}>
+      <Link to={'/'}>Back</Link>
       {
         item ? (
-          <div>
-            <p>{item.name} {item.translations.kor.common}</p>
-            <p><b>Region:</b> {item.region}</p>
-            <p><b>Capital:</b>: {item.capital}</p>
-            <p><b>Sub Region:</b> {item.subregion}</p>
-            <p><b>Top Level Domain:</b> {item.topleveldomain}</p>
-            <p><b>Language:</b> {item.language}</p>
+          <div className='detailBox'>
+              <img src={item.flags.png} id='detailImg'></img>
+            <div id='detailInfo'>
+              <p>{item.name.common} {item.translations.kor.common}</p>
+              <p><b>Region:</b> {item.region}</p>
+              <p><b>Capital:</b>: {item.capital}</p>
+              <p><b>Sub Region:</b> {item.subregion}</p>
+              <p><b>Top Level Domain:</b> {item.topleveldomain}</p>
+              <p><b>Language:</b> {item.language}</p>
+            </div>
           </div>
         ) : (
           <p>Loading...</p>

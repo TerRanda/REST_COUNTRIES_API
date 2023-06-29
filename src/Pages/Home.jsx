@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-  const {darkMode, country} = useContext(Context);
+  const {darkMode, country, search} = useContext(Context);
   console.log(country);
 
+  
   return (
     <main className={darkMode ? 'App darkMode' : 'App'} id='countryBox'>
       

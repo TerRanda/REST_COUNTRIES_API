@@ -12,3 +12,25 @@
   color: white;
   border: 1px solid white;
 }
+.detailBox{
+  display: grid;
+  grid-template-areas:
+  "img info"
+  ;
+  grid-template-columns: 60% 40%;
+}
+#detailImg{
+  grid-area: img;
+  width: 800px;
+  height: 600px;
+  margin: 20px;
+}
+#detailInfo{
+  grid-area: info;
+  display: grid;
+  text-align: start;
+  align-items: center;
+  align-content: center;
+  margin: 20px;
+  font-size: 20px;
+}
